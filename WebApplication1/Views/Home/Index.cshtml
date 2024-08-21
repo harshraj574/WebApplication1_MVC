@@ -1,8 +1,30 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<head>
+    <style>
+       img{
+          width: 23vw;
+          heigth: 2vh;
+       }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        .img-class {
+            z-index: 1;
+            position: relative; /* Ensure the z-index works */
+        }
+        .header{
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-class" z-index="1">
+        <div class="text-center">
+            <h1 class="display-4 header">Welcome</h1>
+            <img src="~/Images/test-img.jpg" alt="Alternate Text" />
+        </div>
+    </div>
+</body>
+
+

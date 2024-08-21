@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApplication1.Models.Excel.Customer>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+	<div class="row">
+		<div class="col-8 offset-2">
+			<table class="table table-bordered">
+				<thead>
+					<tr class="text-center">
+						<th>Cust_id</th>
+						<th>FirstName</th>
+						<th>LastName</th>
+						<th>Gender</th>
+						<th>Age</th>
+						<th>Country</th>
+
+					</tr>
+				</thead>
+				@foreach (var d in Model)
+				{
+					<tr class="text-center">
+						<td>@d.CustomerCode</td>
+						<td>@d.FirstName</td>
+						<td>@d.LastName</td>
+						<td>@d.Gender</td>
+						<td>@d.Age</td>
+						<td>@d.Country</td>
+
+					</tr>
+				}
+			</table>
+		</div>
+	</div>
+</div>
+
